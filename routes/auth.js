@@ -55,7 +55,6 @@ router.post('/login', async (req, res) => {
         }
   
         const token = await userLogin.generateAuthToken();
-        console.log(token);
         res.cookie("jwtoken", token, {
           httpOnly: true,
           maxAge: 258943000000, 
